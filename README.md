@@ -1,1 +1,1 @@
-JS practice HELLO
+JS practice
