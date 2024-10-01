@@ -8,18 +8,30 @@
         <h1>Пересчет величин</h1>
         <script type="text/javascript">
             const ins = window.prompt('Величина в дюймах', 0);
+            const cents = ins * 2.54;
             if (ins == null) {
-                window.document.write('<p>Величина не была' + ' введена</p>');
+                window.document.write('<p>Величина не была введена</p>');
             }
             else if (ins < 0) {
                  window.document.write('<p>Величина не может быть отрицательной</p>');
             }
             else {
-                const cents = ins * 2.54;
-                window.document.write('<p>', cents, '</p');
+                let s;
+                switch(Math.floor(ins)) {
+                    case 1: 
+                    s = 'дюйм';
+                    break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        s = 'дюйма';
+                        break;
+                    default:
+                        s = 'дюймов';
+                }
+                window.document.write('<p>', cents, ' см.</p>');
+                window.document.write('<p>', ins,  ' ',s, '</p1>');
             }
         </script>
     </body>
 </html>
-
-
